@@ -4,11 +4,10 @@ import csv
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/',methods= [ 'GET','POST'])
 def index():
-    return '<h1> hello  </h1>'
-
-
+    #return '<h1> hello  </h1>'
+    return render_template('userinterface.html')
 @app.route('/ui',methods= [ 'GET','POST'])
 def ui():
     return render_template('userinterface.html')
